@@ -1,0 +1,349 @@
+<mvc:View controllerName="view1purchase_order.controller.View1" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:table="sap.ui.table" xmlns:u="sap.ui.unified"
+		xmlns:fb="sap.ui.comp.filterbar" xmlns:tnt="sap.tnt" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout">
+	<App>
+		<pages>
+			<Page showHeader="false">
+				<content>
+					<VBox class="vb_Background">
+				<Toolbar class="toolBar">
+					<content>
+						<Label text="{i18n>title}" design="Bold"></Label>
+					</content>
+				</Toolbar>
+				
+				<HBox class="btn_mar">
+					 
+					<Button text="Clear" press="onClear" />
+			    <Button type="Emphasized" text="Search" press="onSearch" class="emp_search" />
+			     
+				
+					
+				</HBox>
+			    <HBox>
+			    	
+			    <l:Grid defaultSpan="L4 M2 S12" width="100%">
+				<l:content>
+				<VBox class="vb_left">
+					<Label text="{i18n>comp_code}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp1" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/company}" >
+									<suggestionItems>
+										<core:Item text="{oModel>company_code}"  />
+									</suggestionItems> 
+									</Input>
+					
+				</VBox>
+				
+					<VBox class="vb_left">
+					<Label text="{i18n>pur_org}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp2" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/purchaseorganization}" >
+									<suggestionItems>
+										<core:Item text="{oModel>pur_org}"  />
+									</suggestionItems> 
+									</Input>
+					
+				</VBox>
+					<VBox class="vb_left">
+					<Label text="{i18n>pur_grp}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp3" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/purchasegroup}" >
+									<suggestionItems>
+										<core:Item text="{oModel>pur_grp}"/>
+									</suggestionItems> 
+									</Input>
+				</VBox>
+					<!--<VBox class="vb_left">
+					<Label text="{i18n>pur_grp}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" maxLength="18" startSuggestion="4" 
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/purchasegroup}" >
+									<suggestionItems>
+										<core:Item text="{oModel>pur_grp}"  />
+									</suggestionItems> 
+									</Input>
+				</VBox>-->
+				
+				</l:content>
+				</l:Grid>
+				</HBox>
+				<HBox>
+					<l:Grid defaultSpan="L2 M2 S12" width="100%">
+				<l:content>
+				<VBox class="vb_left">
+					<Label text="{i18n>ven}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp4" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/vendor}" >
+									<suggestionItems>
+										<core:Item text="{oModel>vendor_id}"  />
+									</suggestionItems> 
+									</Input>
+					
+				</VBox>
+				
+					<VBox class="vb_left">
+					<Label text="{i18n>po_number}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp5" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/ponumber}" >
+									<suggestionItems>
+										<core:Item text="{oModel>po_number}"  />
+									</suggestionItems> 
+									</Input>
+					
+				</VBox>
+					<VBox class="vb_left">
+					<Label text="{i18n>plan}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp6" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/plant}" >
+									<suggestionItems>
+										<core:Item text="{oModel>plant_name}"/>
+									</suggestionItems> 
+									</Input>
+				</VBox>
+					<VBox class="vb_left">
+					<Label text="{i18n>pur_grp}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/purchasegroup}" >
+									<suggestionItems>
+										<core:Item text="{oModel>pur_grp}"  />
+									</suggestionItems> 
+									</Input>
+				</VBox>
+				
+				</l:content>
+				</l:Grid>
+				</HBox>
+				<HBox>
+				<l:Grid defaultSpan="L2 M2 S12" width="100%">
+				<l:content>	
+				<VBox class="vb_left">
+					<Label text="{i18n>created_by}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp7" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/createby}" >
+									<suggestionItems>
+										<core:Item text="{oModel>created_by}"  />
+									</suggestionItems> 
+									</Input>
+				</VBox>
+					<VBox class="vb_left">
+					<Label text="{i18n>payment_form}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp8" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/paymentterm}" >
+									<suggestionItems>
+										<core:Item text="{oModel>payment_term}"  />
+									</suggestionItems> 
+									</Input>
+				</VBox>
+					<VBox class="vb_left">
+					<Label text="{i18n>curr}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" id="inp9" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/currency}" >
+									<suggestionItems>
+										<core:Item text="{oModel>curr}"/>
+									</suggestionItems> 
+									</Input>
+				</VBox>
+					<VBox class="vb_left">
+					<Label text="{i18n>pur_grp}"></Label>
+					<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="" maxLength="18" startSuggestion="4" width="90%"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/purchasegroup}" >
+									<suggestionItems>
+										<core:Item text="{oModel>pur_grp}"  />
+									</suggestionItems> 
+									</Input>
+				</VBox>
+				
+				</l:content>
+				</l:Grid>
+				</HBox>
+			<!--	<fb:FilterBar reset="onReset" id="FD_VP_INVENTORY_REPORT"
+					search="onSearch" class="salesReportFBCLass" showClearButton="true"
+					clear="onClear" showRestoreButton="true" >
+					<fb:filterItems >
+						<fb:FilterItem name="A" label="{i18n>comp_code}" labelTooltip="{i18n>comp_code}" >
+							<fb:control>
+							<Input placeholder="Enter 4 digits for suggestions" filterSuggests="false"
+							value="{oModel>/vendorId}"
+									suggest="onHandleSuggestPO" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/vendor}" >
+									<suggestionItems>
+										<core:Item text="{oModel>vendor_id}"  />
+									</suggestionItems> 
+									</Input>
+								</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="B" label="{i18n>pur_org}"
+							labelTooltip="{i18n>pur_org}">
+							<fb:control>
+							<Input filterSuggests="false"
+							value="{oModel>/invoiceType}"
+									suggest="onHandleSuggestPO" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/vendor}" >
+									<suggestionItems>
+										<core:Item text="{oModel>vendor_id}"  />
+									</suggestionItems> 
+									</Input>
+						
+								</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="C" label="{i18n>pur_grp}"
+							labelTooltip="{i18n>pur_grp}">
+							<fb:control>
+								<Input filterSuggests="false"
+							value="{oModel>/invoiceType}"
+									suggest="onHandleSuggestPO" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/vendor}" class="dp2">
+									<suggestionItems>
+										<core:Item text="{oModel>vendor_id}"  />
+									</suggestionItems> 
+									</Input>
+							</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="D" label="{i18n>ven}" labelTooltip="{i18n>ven}">
+							<fb:control>
+									<Input filterSuggests="false"
+							value="{oModel>/invoiceType}"
+									suggest="onHandleSuggestPO" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px" suggestionItems="{oModel>/vendor}" class="dp2">
+									<suggestionItems>
+										<core:Item text="{oModel>vendor_id}"  />
+									</suggestionItems> 
+									</Input>
+							</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="E" label="{i18n>po_number}" labelTooltip="{i18n>po_number}">
+							<fb:control>
+							<Input placeholder="Enter Req ID" filterSuggests="false" value="{oModel>/requestId}"
+									suggest="onHandleSuggestPO" maxLength="18" startSuggestion="2"
+									showSuggestion="true" maxSuggestionWidth="190px"
+									suggestionItems="{oModel>/request}">
+									<suggestionItems>
+										<core:Item text="{oModel>req_id}"  />
+									</suggestionItems></Input>
+							</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="F" label="{i18n>plan}" labelTooltip="{i18n>plan}">
+							<fb:control>
+							<Input placeholder="Enter Po Number" filterSuggests="false" value="{oModel>/poNumber}"
+									suggest="onHandleSuggestPO" maxLength="18" startSuggestion="4"
+									showSuggestion="true" maxSuggestionWidth="190px"
+									suggestionItems="{oModel>/po}">
+									<suggestionItems>
+										<core:Item text="{oModel>po_Number}"  />
+									</suggestionItems></Input>
+							</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="G" label="{i18n>created_by}" labelTooltip="{i18n>created_by}">
+							<fb:control>
+							<Select items="{oModel>/type}" selectedKey="{oModel>/status}">
+									<core:Item key="{oModel>invoice}"   text="{oModel>invoice}"  />
+								</Select>
+							</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="H" label="{i18n>payment_form}" labelTooltip="{i18n>payment_form}">
+							<fb:control>
+							<Select items="{oModel>/type}" selectedKey="{oModel>/status}">
+									<core:Item key="{oModel>invoice}"   text="{oModel>invoice}"  />
+								</Select>
+							</fb:control>
+						</fb:FilterItem>
+						<fb:FilterItem name="I" label="{i18n>curr}" labelTooltip="{i18n>curr}">
+							<fb:control>
+							<Select items="{oModel>/type}" selectedKey="{oModel>/status}">
+									<core:Item key="{oModel>invoice}"   text="{oModel>invoice}"  />
+								</Select>
+							</fb:control>
+						</fb:FilterItem>
+					</fb:filterItems>
+				</fb:FilterBar>-->
+			</VBox>
+			
+			
+			<VBox class="vb_Background1"
+				visible="false" id="invSOHTableView">
+			
+       
+			<Toolbar class="toolBar">
+					<content>
+					<Label text="{i18n>table_head}" design="Bold"/>
+							<ToolbarSpacer></ToolbarSpacer>
+							<SearchField width="20%"></SearchField>
+					</content>
+				</Toolbar>
+				<table:Table  items="{oModel>/table}"
+				 selectionMode="MultiToggle" rows="{oModel>/table}" visibleRowCount="7" >
+
+        
+			
+ 				<table:columns>
+						<table:Column width="12rem">
+						<Label text="{i18n>item_no}" />
+						<table:template>
+							<Text text="{oModel>req_id}"/>
+						</table:template>
+							<!-- <Text text="Req ID"/> -->
+						</table:Column>
+						<table:Column width="12rem">
+						<Label text="{i18n>qua}" />
+						<table:template>
+							<Text text="{oModel>vendor_id}"/>
+						</table:template>
+							<!-- <Text text="Vendor ID / Name"/> -->
+						</table:Column>
+						<table:Column width="12rem">
+						<Label text="{i18n>unit_price}" />
+						<table:template>
+							<Text text="{oModel>sap_no}" />
+						</table:template>
+							<!-- <Text text="SAP Invoice No"/> -->
+						</table:Column>
+						<table:Column width="12rem">
+						<Label text="{i18n>net_Price}" />
+						<table:template>
+							<Text text="{oModel>vendor_no}" />
+						</table:template>
+						<!-- <Text text="Vendor Invoice No"/> -->
+						</table:Column>
+						<table:Column width="12rem" >
+						<Label text="{i18n>desc}" />
+						<table:template>
+							<Text text="{oModel>invoice_value}" />
+						</table:template>
+							<!-- <Text text="Invoice Value"/> -->
+						</table:Column>
+						<table:Column width="12rem">
+						<Label text="{i18n>delete_func}" />
+						<table:template>
+							<Text text="{oModel>posting_date}" />
+						</table:template>
+							<!-- <Text text="Posting Date"/> -->
+						</table:Column>
+						<table:Column width="12rem">
+						<Label text="{i18n>conversion_factor}" />
+						<table:template>
+							<Text text="{oModel>status}" />
+						</table:template>
+							<!-- <Text text="Status"/> -->
+						</table:Column>
+					</table:columns>
+					
+				</table:Table>
+			
+			</VBox> 
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

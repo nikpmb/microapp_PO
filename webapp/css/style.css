@@ -1,0 +1,38 @@
+.emp_search{
+	margin-left:10%;
+}
+.btn_mar{
+	margin-left:57%;
+}
+.vb_left{
+	margin-left:5%;
+}
+.tnt_bg{
+	background-color: white !important;
+	color:black !important;
+}
+
+.toolBar{
+	background-color:white;
+}
+.vb_Background{
+	background-color:white;
+	margin:1%;
+}
+.vb_Background1{
+	background-color:white;
+	/* margin-top:2%; */
+	margin:1%;
+}
+.table{
+	margin-bottom:5%;
+}
+/* .sapMIBar .sapMBarChild:first-child {
+    margin-left: 0.25rem;
+    margin-top: -3%;
+}
+.sapMTB-Transparent-CTX.sapMTB {
+    padding-left: 0.75rem;
+    
+    margin-top:0%;
+} *//* Enter your custom styles here */

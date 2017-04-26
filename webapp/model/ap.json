@@ -1,0 +1,205 @@
+{
+	"type": [
+
+
+		{
+			"invoice": "Active"
+		},
+
+		{
+			"invoice": "Inactive"
+
+		}
+	],
+
+	"company": [
+
+		{
+			"company_code": "124512"
+		}, {
+			"company_code": "124356"
+		}, {
+			"company_code": "123456"
+		}, {
+			"company_code": "543212"
+		}, {
+			"company_code": "452132"
+		}, {
+			"company_code": "124682"
+		}
+	],
+	"purchaseorganization": [
+
+		{
+			"pur_org": "1225"
+		}, {
+			"pur_org": "2458"
+		}, {
+			"pur_org": "3698"
+		}, {
+			"pur_org": "4587"
+		}, {
+			"pur_org": "1254"
+		}, {
+			"pur_org": "9875"
+		}
+	],
+	"purchasegroup": [
+
+		{
+			"pur_grp": "8754545"
+		}, {
+			"pur_grp": "2135645"
+		}, {
+			"pur_grp": "5645467"
+		}, {
+			"pur_grp": "4684654"
+		}, {
+			"pur_grp": "1123134"
+		}, {
+			"pur_grp": "1313213"
+		}
+	],"vendor": [
+
+		{
+			"vendor_id": "8754545"
+		}, {
+			"vendor_id": "2135645"
+		}, {
+			"vendor_id": "5645467"
+		}, {
+			"vendor_id": "4684654"
+		}, {
+			"vendor_id": "1123134"
+		}, {
+			"vendor_id": "1313213"
+		}
+	],"ponumber": [
+
+		{
+			"po_number": "8754545"
+		}, {
+			"po_number": "2135645"
+		}, {
+			"po_number": "5645467"
+		}, {
+			"po_number": "4684654"
+		}, {
+			"po_number": "1123134"
+		}, {
+			"po_number": "1313213"
+		}
+	],"plant": [
+
+		{
+			"plant_name": "8754545"
+		}, {
+			"plant_name": "2135645"
+		}, {
+			"plant_name": "5645467"
+		}, {
+			"plant_name": "4684654"
+		}, {
+			"plant_name": "1123134"
+		}, {
+			"plant_name": "1313213"
+		}
+	],"createby": [
+
+		{
+			"created_by": "8754545"
+		}, {
+			"created_by": "2135645"
+		}, {
+			"created_by": "5645467"
+		}, {
+			"created_by": "4684654"
+		}, {
+			"created_by": "1123134"
+		}, {
+			"created_by": "1313213"
+		}
+	],"paymentterm": [
+
+		{
+			"payment_term": "8754545"
+		}, {
+			"payment_term": "2135645"
+		}, {
+			"payment_term": "5645467"
+		}, {
+			"payment_term": "4684654"
+		}, {
+			"payment_term": "1123134"
+		}, {
+			"payment_term": "1313213"
+		}
+	],"currency": [
+
+		{
+			"curr": "8754545"
+		}, {
+			"curr": "2135645"
+		}, {
+			"curr": "5645467"
+		}, {
+			"curr": "4684654"
+		}, {
+			"curr": "1123134"
+		}, {
+			"curr": "1313213"
+		}
+	],
+	"table": [
+
+		{
+			"req_id": "1225",
+			"vendor_id": "124512",
+			"sap_no": "875155",
+			"vendor_no": "11255",
+			"invoice_value": "50000",
+			"posting_date": "05/08/2016",
+			"status": "Active"
+		}, {
+			"req_id": "2458",
+			"vendor_id": "124356",
+			"sap_no": "12012",
+			"vendor_no": "15454",
+			"invoice_value": "40000",
+			"posting_date": "10/12/2013",
+			"status": "Inactive"
+		}, {
+			"req_id": "3698",
+			"vendor_id": "123456",
+			"sap_no": "125151",
+			"vendor_no": "5644",
+			"invoice_value": "62500",
+			"posting_date": "25/02/2014",
+			"status": "Active"
+		}, {
+			"req_id": "4587",
+			"vendor_id": "543212",
+			"sap_no": "588755",
+			"vendor_no": "122556",
+			"invoice_value": "85420",
+			"posting_date": "08/05/2012",
+			"status": "Inactive"
+		}, {
+			"req_id": "1254",
+			"vendor_id": "452132",
+			"sap_no": "254622",
+			"vendor_no": "3258",
+			"invoice_value": "55524",
+			"posting_date": "02/10/2012",
+			"status": "Active"
+		}, {
+			"req_id": "9875",
+			"vendor_id": "124682",
+			"sap_no": "145242",
+			"vendor_no": "35688",
+			"invoice_value": "125458",
+			"posting_date": "21/02/2017",
+			"status": "Inactive"
+		}
+	]
+}
